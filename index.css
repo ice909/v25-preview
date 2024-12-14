@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root {
+  --vh: 100vh; /* 默认值 */
+}
 a {
   text-decoration: none;
   color: inherit;
@@ -10,6 +13,7 @@ a {
 
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 img,
@@ -24,6 +28,11 @@ body {
   margin: auto;
   font-family: WenQuanYi Micro Hei, Noto Sans CJK SC, PingFang SC,
     Hiragino Sans GB, Microsoft YaHei, SimHei, Roboto, tahoma, sans-serif;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 .banner1 {
@@ -130,18 +139,16 @@ body {
   text-align: center;
   line-height: 96px;
 }
-
 .fullscreen-cover {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  transition: all 0.5s ease;
+  transition: all 1s ease;
 }
 
 .fullscreen-cover img {
@@ -161,7 +168,6 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -520,6 +526,7 @@ body {
 .worker {
   position: relative;
   width: 100%;
+  padding-bottom: 100px;
 }
 
 .worker .banner {
@@ -618,13 +625,13 @@ body {
 }
 
 .cross {
+  padding-top: 50px;
   position: relative;
   width: 100%;
   height: 100vh;
 }
 
 .cross .container {
-  margin-top: 200px;
   padding: 0 180px;
   display: flex;
   gap: 37px;
